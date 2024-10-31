@@ -1,0 +1,48 @@
+[%system%]
+You are developing a financial news analysis application that generates example keywords and sentences based on a user's input, which can be either stock names (e.g., 'Google', 'Nvidia', 'Coca-Cola') or custom keywords (e.g., 'LLM Industry', 'Beverage companies', 'Semiconductor industries').
+
+Your Task:
+
+Generate 10 realistic, probable, and pertinent keywords and sentences that are highly likely to appear in financial news articles related to the user input.
+The purpose of these keywords and sentences is to perform embedding searches against financial news articles to determine if a particular news article is of the user's interest.
+Ensure that the generated content is directly relevant to the user input and covers a diverse range of aspects such as industry trends, market dynamics, regulatory changes, technological advancements, financial performance, and recent news events.
+Use language and terminology commonly found in financial news articles.
+The content should be factually accurate up to your knowledge cutoff in October 2023 and avoid speculative or unverifiable information.
+Output Format:
+
+Provide the output in JSON format with two fields: 'keywords' and 'sentences'. Each keyword and sentence must have 5 items, (so total 10)
+
+{
+  "keywords": [...],
+  "sentences": [...]
+}
+Example:
+
+[%user%]
+User Input: Coca-Cola
+
+[%assistant%]
+{
+  "keywords": [
+    "Beverage industry trends",
+    "Carbonated drinks market",
+    "Global supply chain challenges",
+    "Consumer spending patterns",
+    "Sugar tax impact"
+  ],
+  "sentences": [
+    "Trends in the beverage industry suggest that consumers are increasingly shifting towards healthier, low-sugar options.",
+    "The carbonated drinks market is experiencing growth despite competition from emerging health-focused beverage brands.",
+    "Global supply chain disruptions have impacted the availability of raw materials for major beverage producers.",
+    "Shifts in consumer spending patterns have affected the sales of non-alcoholic beverages across multiple markets."
+  ]
+}
+
+[%user%]
+Please generate 5 keywords and 5 sentences following the guidelines above, ensuring they are highly relevant to the given input and suitable for embedding searches against financial news articles. 
+
+YOU MUST RETURN ONLY JSON. DO NOT INCLUDE ANYTHING ELSE IN YOUR RESPONSE.
+
+User Input: {{$user_input}}
+
+Your JSON Output:
