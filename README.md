@@ -40,3 +40,4 @@ To ensure real-time delivery, a polling agent continuously polls the financial n
 
 If relevant, then the article is passed to the Stock Analyzer LLM which is fine-tuned to generate the news analysis including a brief summary and how the article might impact the user’s stock portfolio, which will be delivered to the user via email or SNS channels.
 
+News data will be provided by https://www.newscatcherapi.com/
