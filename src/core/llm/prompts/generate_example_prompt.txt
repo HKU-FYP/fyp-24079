@@ -12,6 +12,9 @@ Output Format:
 
 Provide the output in JSON format with two fields: 'keywords' and 'sentences'. Each keyword and sentence must have 5 items, (so total 10)
 
+[IMPORTANT]
+Note that the generated keywords and examples MUST NOT BE too general. IT MUST BE RELATED TO the provided user input.
+
 {
   "keywords": [...],
   "sentences": [...]

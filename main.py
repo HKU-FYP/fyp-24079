@@ -8,8 +8,10 @@ from pprint import pprint
 def main():
     cfg = load_config()
 
+    STOCK_NAME = "Coca COla"
+
     msg = load_prompt_messages(prompt_path="src/core/llm/prompts/generate_example_prompt.txt")
-    messages = fill_message_placeholders(msg, placeholders={'user_input': 'NVIDIA'})
+    messages = fill_message_placeholders(msg, placeholders={'user_input': STOCK_NAME})
 
     openai = OpenAIChatLLM(
         api_key=cfg.openai.api_key,
@@ -25,7 +27,10 @@ def main():
     #     model=cfg.openai.embedding_model
     # )
 
-    # sim = embedding_model.get_similarity_score("Hello how are you", "whats up man")
+    # sim = embedding_model.get_similarity_score(
+    #     "hellow how are you",
+    #     "hi how are you doing?"
+    #     )
     # print(sim)
 
 
